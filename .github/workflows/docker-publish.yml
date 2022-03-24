@@ -147,7 +147,7 @@ jobs:
         with:
           context: "{{defaultContext}}:8.1"
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:8.1
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest,${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:8.1
 
       - name: Sign the published Docker image
         env:
